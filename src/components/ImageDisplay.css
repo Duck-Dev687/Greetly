@@ -1,0 +1,70 @@
+/* App.css or ImageDisplay.css */
+.image-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns, flexible width */
+    grid-auto-rows: minmax(150px, auto); /* Ensures even row heights */
+    gap: 8px; /* Minimal gap between images */
+    padding: 10px;
+    margin:2rem auto;
+    border: 2px dashed #333;
+    border-radius: 8px;
+    justify-items: center; /* Center the images */
+    max-width:300px;
+  }
+  
+  .image-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 8px;
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill their container without distorting */
+    border-radius: 8px;
+  }
+  
+  .image-card:hover {
+    transform: scale(1.03); /* Hover effect */
+  }
+
+  @media (min-width:320px) {
+    .image-display{
+        max-width:300px;
+
+    }
+  }
+  @media (min-width:500px) {
+    .image-display{
+        max-width:400px;
+
+    }
+  }
+  @media (min-width:600px) {
+    .image-display{
+        max-width:500px;
+
+    }
+  }
+  @media (min-width:700px) {
+    .image-display{
+        max-width:600px;
+
+    }
+  }
+  @media (min-width:900px) {
+    .image-display{
+        max-width:700px;
+
+    }
+  }
+
+ .noImg{
+    margin-top:3.4rem;
+    text-align:center;
+    grid-column:4 span;
+    max-width:300px;
+  }
